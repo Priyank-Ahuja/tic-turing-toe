@@ -24,18 +24,12 @@ class CustomButtom: UIButton {
             self.layer.cornerRadius = 10
             
             // Set the background color
-            self.backgroundColor = Constants.Color.ButtonBackgroundColor
+            self.backgroundColor = Constants.color.buttonBackgroundColor
             
             // Set the tint color (for button text or image)
-            self.tintColor = Constants.Color.LabelTintColor
+            self.tintColor = Constants.color.labelTintColor
             
             // Optional: Set title color
-            self.setTitleColor(Constants.Color.LabelTintColor, for: .normal)
-            
-            // Optional: Set a title for the button
-            //self.setTitle("Custom Button", for: .normal)
-            
-            // Optional: Set font size for title
-            //self.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+            self.setTitleColor(Constants.color.labelTintColor, for: .normal)
         }
 }

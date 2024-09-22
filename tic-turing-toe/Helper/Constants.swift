@@ -11,5 +11,9 @@ struct Constants {
         static let buttonBackgroundColor = UIColor(named: "button-color")
         static let labelTintColor = UIColor(named: "label-color")
         static let backgrroundColor = UIColor(named: "background-color")
+        static let easyColor = UIColor(named: "easy-color")
+        static let mediumColor = UIColor(named: "medium-color")
+        static let hardColor = UIColor(named: "hard-color")
+        static let friendColor = UIColor(named: "friend-color")
     }
 }

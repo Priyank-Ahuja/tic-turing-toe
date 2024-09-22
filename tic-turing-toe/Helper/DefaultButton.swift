@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomButtom: UIButton {
+class DefaultButton: UIButton {
 
     override init(frame: CGRect) {
             super.init(frame: frame)
@@ -22,14 +22,28 @@ class CustomButtom: UIButton {
         private func setupButton() {
             // Set the corner radius
             self.layer.cornerRadius = 10
-            
-            // Set the background color
-            self.backgroundColor = Constants.color.buttonBackgroundColor
-            
+                        
             // Set the tint color (for button text or image)
             self.tintColor = Constants.color.labelTintColor
             
             // Optional: Set title color
             self.setTitleColor(Constants.color.labelTintColor, for: .normal)
+        }
+}
+
+class DefaultButtonWithColor: DefaultButton {
+    override init(frame: CGRect) {
+            super.init(frame: frame)
+            setupButton()
+        }
+        
+        required init?(coder: NSCoder) {
+            super.init(coder: coder)
+            setupButton()
+        }
+        
+        private func setupButton() {
+            // Set the background color
+            self.backgroundColor = Constants.color.buttonBackgroundColor
         }
 }

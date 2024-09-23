@@ -22,7 +22,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dla-02-gDa">
                     <rect key="frame" x="50" y="542.66666666666663" width="293" height="110"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlU-Vw-qRz" customClass="CustomButtom" customModule="tic_turing_toe" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlU-Vw-qRz" customClass="DefaultButtonWithColor" customModule="tic_turing_toe" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="293" height="50"/>
                             <color key="backgroundColor" red="0.38881686329999998" green="0.7286621928" blue="0.76079291110000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
@@ -31,8 +31,11 @@
                             <color key="tintColor" red="0.11764705882352941" green="0.16078431372549018" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="New Game"/>
+                            <connections>
+                                <action selector="newGameButtonAction:" destination="-1" eventType="touchUpInside" id="ghL-JQ-ubC"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2o-su-ciH" customClass="CustomButtom" customModule="tic_turing_toe" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2o-su-ciH" customClass="DefaultButtonWithColor" customModule="tic_turing_toe" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="60" width="293" height="50"/>
                             <color key="backgroundColor" red="0.38823529411764707" green="0.72941176470588232" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>

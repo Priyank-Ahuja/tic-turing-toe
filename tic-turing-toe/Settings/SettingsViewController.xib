@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController" customModule="tic_turing_toe" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gan-Qp-382">
+                    <rect key="frame" x="50" y="311" width="293" height="230"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoB-7N-XLa" customClass="DefaultButton" customModule="tic_turing_toe" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="293" height="50"/>
+                            <color key="backgroundColor" name="easy-color"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="qwC-91-llE"/>
+                            </constraints>
+                            <color key="tintColor" name="label-color"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Easy"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RP0-OK-x9H" customClass="DefaultButton" customModule="tic_turing_toe" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="60" width="293" height="50"/>
+                            <color key="backgroundColor" name="medium-color"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="u4E-OO-S4w"/>
+                            </constraints>
+                            <color key="tintColor" name="label-color"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Medium"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YqX-ed-j8J" customClass="DefaultButton" customModule="tic_turing_toe" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="120" width="293" height="50"/>
+                            <color key="backgroundColor" name="hard-color"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="qet-O3-aeY"/>
+                            </constraints>
+                            <color key="tintColor" name="label-color"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Hard"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7km-op-QCr" customClass="DefaultButton" customModule="tic_turing_toe" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="180" width="293" height="50"/>
+                            <color key="backgroundColor" name="friend-color"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="t1p-Vi-nYk"/>
+                            </constraints>
+                            <color key="tintColor" name="label-color"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Friend"/>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="hoB-7N-XLa" secondAttribute="trailing" id="5hO-Jf-uOC"/>
+                        <constraint firstItem="YqX-ed-j8J" firstAttribute="leading" secondItem="gan-Qp-382" secondAttribute="leading" id="IeF-91-jce"/>
+                        <constraint firstItem="7km-op-QCr" firstAttribute="leading" secondItem="gan-Qp-382" secondAttribute="leading" id="Rsr-pm-nPO"/>
+                        <constraint firstItem="hoB-7N-XLa" firstAttribute="leading" secondItem="gan-Qp-382" secondAttribute="leading" id="UTi-dI-5F2"/>
+                        <constraint firstAttribute="trailing" secondItem="YqX-ed-j8J" secondAttribute="trailing" id="a0A-40-k3s"/>
+                        <constraint firstAttribute="trailing" secondItem="RP0-OK-x9H" secondAttribute="trailing" id="cZu-Hv-V28"/>
+                        <constraint firstAttribute="trailing" secondItem="7km-op-QCr" secondAttribute="trailing" id="ex8-B4-jR2"/>
+                        <constraint firstItem="RP0-OK-x9H" firstAttribute="leading" secondItem="gan-Qp-382" secondAttribute="leading" id="pet-gU-Uv4"/>
+                    </constraints>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lel-HK-2kp" customClass="DefaultLabel" customModule="tic_turing_toe" customModuleProvider="target">
+                    <rect key="frame" x="20" y="265.66666666666669" width="353" height="25.333333333333314"/>
+                    <color key="tintColor" name="label-color"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="background-color"/>
+            <constraints>
+                <constraint firstItem="gan-Qp-382" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="2Vi-qz-TVb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gan-Qp-382" secondAttribute="trailing" constant="50" id="58x-PQ-3xs"/>
+                <constraint firstItem="gan-Qp-382" firstAttribute="top" secondItem="lel-HK-2kp" secondAttribute="bottom" constant="20" id="BO6-Y0-suy"/>
+                <constraint firstItem="lel-HK-2kp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="JGX-G2-ahT"/>
+                <constraint firstItem="lel-HK-2kp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Nhd-KO-JYt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lel-HK-2kp" secondAttribute="trailing" constant="20" id="Ohu-kj-VGl"/>
+                <constraint firstItem="gan-Qp-382" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="bmY-Aj-LOT"/>
+                <constraint firstItem="gan-Qp-382" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="c2O-K9-sFc"/>
+            </constraints>
+            <point key="canvasLocation" x="13" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="background-color">
+            <color red="0.51372549019607838" green="0.62745098039215685" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="easy-color">
+            <color red="0.63921568627450975" green="0.85098039215686272" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="friend-color">
+            <color red="0.60784313725490191" green="0.34901960784313724" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="hard-color">
+            <color red="0.90588235294117647" green="0.29803921568627451" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="label-color">
+            <color red="0.11764705882352941" green="0.16078431372549021" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="medium-color">
+            <color red="0.94509803921568625" green="0.7686274509803922" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

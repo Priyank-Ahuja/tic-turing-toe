@@ -25,15 +25,6 @@ class GameViewController: UIViewController {
     
     var buttons: [GameButton]?
     var viewModel: GameViewModel?
-    var board = [String](repeating: "", count: 9) // 9 empty slots
-    var currentPlayer = "X"
-    var gameActive = true
-    
-    let winningCombinations = [
-        [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows
-        [0, 3, 6], [1, 4, 7], [2, 5, 8], // Columns
-        [0, 4, 8], [2, 4, 6]             // Diagonals
-    ]
     
     init(model: GameViewModel) {
         self.viewModel = model
@@ -65,55 +56,45 @@ class GameViewController: UIViewController {
         statusLabel.text = "Player X's Turn"
     }
     
-    func resetGame() {
-        board = [String](repeating: "", count: 9)
-        currentPlayer = "X"
-        gameActive = true
-        statusLabel.text = "Player X's Turn"
-        
-        guard let buttons else { return }
-        
-        for button in buttons {
-            button.setTitle("", for: .normal)
-            button.isEnabled = true
-        }
-    }
-    
-    // Check if the current player has won
-    func checkForWinner() -> Bool {
-        for combination in winningCombinations {
-            if board[combination[0]] != "" && board[combination[0]] == board[combination[1]] && board[combination[1]] == board[combination[2]] {
-                return true
-            }
-        }
-        return false
+    func updateUI(forPlayer player: String, atIndex index: Int) {
+        buttons?[index].setTitle(player, for: .normal)
+        buttons?[index].isEnabled = false
     }
     
     
     @IBAction func gameButttonsAction(_ sender: GameButton) {
         let tag = sender.tag
         
-        // Ensure that the game is active and the cell is empty
-        if gameActive && board[tag] == "" {
-            board[tag] = currentPlayer
-            sender.setTitle(currentPlayer, for: .normal)
-            sender.isEnabled = false // Disable the button after marking it
+        if viewModel?.processMove(at: tag, forPlayer: "X") == true {
+            updateUI(forPlayer: "X", atIndex: tag)
             
-            if checkForWinner() {
-                statusLabel.text = "Player \(currentPlayer) Wins!"
-                gameActive = false
-            } else if board.contains("") == false {
+            if viewModel?.checkForWinner() == true {
+                statusLabel.text = "Player X Wins!"
+            } else if viewModel?.board.contains("") == false {
                 statusLabel.text = "It's a Draw!"
-                gameActive = false
             } else {
-                currentPlayer = (currentPlayer == "X") ? "O" : "X"
-                statusLabel.text = "Player \(currentPlayer)'s Turn"
+                statusLabel.text = "Player O's Turn"
+                let aiMoveIndex = viewModel?.aiMove() ?? -1
+                updateUI(forPlayer: "O", atIndex: aiMoveIndex)
+                
+                if viewModel?.checkForWinner() == true {
+                    statusLabel.text = "Player O Wins!"
+                } else if viewModel?.board.contains("") == false {
+                    statusLabel.text = "It's a Draw!"
+                } else {
+                    statusLabel.text = "Player X's Turn"
+                }
             }
         }
     }
     
     
     @IBAction func resetButtonAction(_ sender: Any) {
-        resetGame()
+        viewModel?.resetGame()
+        statusLabel.text = "Player X's Turn"
+        buttons?.forEach { button in
+            button.setTitle("", for: .normal)
+            button.isEnabled = true
+        }
     }
 }

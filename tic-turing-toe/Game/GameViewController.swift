@@ -40,6 +40,12 @@ class GameViewController: UIViewController {
         
         buttons = [gameButton0, gameButton1, gameButton2, gameButton3, gameButton4, gameButton5, gameButton6, gameButton7, gameButton8]
         
+        setupInterface()
+        
+        statusLabel.text = "Player X's Turn"
+    }
+    
+    func setupInterface() {
         switch viewModel?.level {
         case .easy:
             gameBackgroundView.backgroundColor = Constants.color.easyColor
@@ -52,8 +58,6 @@ class GameViewController: UIViewController {
         case .none:
             gameBackgroundView.backgroundColor = Constants.color.buttonBackgroundColor
         }
-        
-        statusLabel.text = "Player X's Turn"
     }
     
     func updateUI(forPlayer player: String, atIndex index: Int) {
@@ -88,6 +92,11 @@ class GameViewController: UIViewController {
         }
     }
     
+    @IBAction func changeLevelAction(_ sender: Any) {
+        let settingsViewController = SettingsViewController()
+        settingsViewController.delegate = self
+        self.navigationController?.present(settingsViewController, animated: true)
+    }
     
     @IBAction func resetButtonAction(_ sender: Any) {
         viewModel?.resetGame()
@@ -96,5 +105,12 @@ class GameViewController: UIViewController {
             button.setTitle("", for: .normal)
             button.isEnabled = true
         }
+    }
+}
+
+extension GameViewController: SettingsViewControllerDelegate {
+    func didSelectLevel(level: GameLevel) {
+        self.viewModel?.level = level
+        setupInterface()
     }
 }

@@ -169,6 +169,17 @@
                         <action selector="resetButtonAction:" destination="-1" eventType="touchUpInside" id="YmI-vo-gIR"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sgx-sy-ScY" customClass="DefaultButtonWithColor" customModule="tic_turing_toe" customModuleProvider="target">
+                    <rect key="frame" x="20" y="692.66666666666663" width="353" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="71r-UI-Wnd"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Change Level"/>
+                    <connections>
+                        <action selector="changeLevelAction:" destination="-1" eventType="touchUpInside" id="YeN-wD-IlL"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="background-color"/>
@@ -178,6 +189,8 @@
                 <constraint firstItem="XkJ-Ld-DyZ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="94o-Rs-8ZT"/>
                 <constraint firstItem="7Pj-nT-yzN" firstAttribute="bottom" secondItem="XkJ-Ld-DyZ" secondAttribute="bottom" id="IQY-5Q-l4k"/>
                 <constraint firstItem="6G6-JR-aEs" firstAttribute="top" secondItem="7Pj-nT-yzN" secondAttribute="bottom" constant="20" id="MfY-uk-1Wy"/>
+                <constraint firstItem="Sgx-sy-ScY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="SBJ-82-AOZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Sgx-sy-ScY" secondAttribute="trailing" constant="20" id="Ujd-Ic-pnh"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XkJ-Ld-DyZ" secondAttribute="trailing" constant="20" id="V0z-Bz-qPw"/>
                 <constraint firstItem="UP4-5O-Zp6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="VrL-Jz-yU1"/>
                 <constraint firstItem="7Pj-nT-yzN" firstAttribute="trailing" secondItem="XkJ-Ld-DyZ" secondAttribute="trailing" id="YeC-fs-Rdw"/>
@@ -186,6 +199,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6G6-JR-aEs" secondAttribute="trailing" constant="20" id="eBg-ez-qvv"/>
                 <constraint firstItem="7Pj-nT-yzN" firstAttribute="top" secondItem="UP4-5O-Zp6" secondAttribute="bottom" constant="20" id="iIt-Qy-c87"/>
                 <constraint firstItem="7Pj-nT-yzN" firstAttribute="leading" secondItem="XkJ-Ld-DyZ" secondAttribute="leading" id="ijq-FI-knD"/>
+                <constraint firstItem="Sgx-sy-ScY" firstAttribute="top" secondItem="6G6-JR-aEs" secondAttribute="bottom" constant="20" id="szy-jJ-YBy"/>
                 <constraint firstItem="XkJ-Ld-DyZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="tLB-UE-gyv"/>
             </constraints>
             <point key="canvasLocation" x="36" y="20"/>
@@ -196,7 +210,7 @@
             <color red="0.51372549019607838" green="0.62745098039215685" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

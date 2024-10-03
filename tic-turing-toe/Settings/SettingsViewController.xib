@@ -31,6 +31,9 @@
                             <color key="tintColor" name="label-color"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Easy"/>
+                            <connections>
+                                <action selector="easyButtonAction:" destination="-1" eventType="touchUpInside" id="veQ-L7-mf2"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RP0-OK-x9H" customClass="DefaultButton" customModule="tic_turing_toe" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="60" width="293" height="50"/>
@@ -41,6 +44,9 @@
                             <color key="tintColor" name="label-color"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Medium"/>
+                            <connections>
+                                <action selector="mediumButtonAction:" destination="-1" eventType="touchUpInside" id="ID8-qq-bGR"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YqX-ed-j8J" customClass="DefaultButton" customModule="tic_turing_toe" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="120" width="293" height="50"/>
@@ -51,6 +57,9 @@
                             <color key="tintColor" name="label-color"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Hard"/>
+                            <connections>
+                                <action selector="hardButtonAction:" destination="-1" eventType="touchUpInside" id="s5F-5w-2JB"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7km-op-QCr" customClass="DefaultButton" customModule="tic_turing_toe" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="180" width="293" height="50"/>
@@ -61,6 +70,9 @@
                             <color key="tintColor" name="label-color"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Friend"/>
+                            <connections>
+                                <action selector="friendButtonAction:" destination="-1" eventType="touchUpInside" id="LLP-hM-fXf"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>

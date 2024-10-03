@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameViewController" customModule="tic_turing_toe" customModuleProvider="target">
+            <connections>
+                <outlet property="gameBackgroundView" destination="7Pj-nT-yzN" id="Wan-Oz-Yrf"/>
+                <outlet property="gameButton0" destination="EFf-3G-LxI" id="gMH-Vr-ZPs"/>
+                <outlet property="gameButton1" destination="xLu-S3-r5y" id="sHg-ZZ-PCY"/>
+                <outlet property="gameButton2" destination="cf9-O2-abs" id="Jbx-GJ-Y9w"/>
+                <outlet property="gameButton3" destination="W9i-zO-ESN" id="mbB-5r-Cvb"/>
+                <outlet property="gameButton4" destination="Y5Z-9o-PCd" id="96W-TY-sW8"/>
+                <outlet property="gameButton5" destination="7Sj-6u-DWm" id="Uww-KG-Byr"/>
+                <outlet property="gameButton6" destination="zeC-MR-G3x" id="Rhe-Fe-CPY"/>
+                <outlet property="gameButton7" destination="1jy-rR-HA0" id="Iuk-RX-2du"/>
+                <outlet property="gameButton8" destination="F05-Ub-ah4" id="p5Q-fk-nO5"/>
+                <outlet property="resetButton" destination="6G6-JR-aEs" id="fPg-uF-idS"/>
+                <outlet property="statusLabel" destination="UP4-5O-Zp6" id="pWH-7v-ueI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UP4-5O-Zp6" customClass="DefaultLabel" customModule="tic_turing_toe" customModuleProvider="target">
+                    <rect key="frame" x="20" y="209.33333333333334" width="353" height="20.333333333333343"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Pj-nT-yzN">
+                    <rect key="frame" x="20" y="249.66666666666663" width="353" height="353"/>
+                    <color key="backgroundColor" systemColor="systemPinkColor"/>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="XkJ-Ld-DyZ">
+                    <rect key="frame" x="20" y="249.66666666666663" width="353" height="353"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="YYy-9X-OnS">
+                            <rect key="frame" x="0.0" y="0.0" width="353" height="116.33333333333333"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFf-3G-LxI" customClass="GameButton" customModule="tic_turing_toe" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="116.33333333333333" height="116.33333333333333"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain"/>
+                                    <connections>
+                                        <action selector="gameButttonsAction:" destination="-1" eventType="touchUpInside" id="0wj-LZ-EZ0"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLu-S3-r5y" customClass="GameButton" customModule="tic_turing_toe" customModuleProvider="target">
+                                    <rect key="frame" x="118.33333333333334" y="0.0" width="116.33333333333334" height="116.33333333333333"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain"/>
+                                    <connections>
+                                        <action selector="gameButttonsAction:" destination="-1" eventType="touchUpInside" id="JpL-HM-re1"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cf9-O2-abs" customClass="GameButton" customModule="tic_turing_toe" customModuleProvider="target">
+                                    <rect key="frame" x="236.66666666666671" y="0.0" width="116.33333333333334" height="116.33333333333333"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain"/>
+                                    <connections>
+                                        <action selector="gameButttonsAction:" destination="-1" eventType="touchUpInside" id="1ZY-Hp-k7b"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="EFf-3G-LxI" secondAttribute="bottom" id="BfD-YJ-GDJ"/>
+                                <constraint firstAttribute="bottom" secondItem="xLu-S3-r5y" secondAttribute="bottom" id="WtL-ZI-g6Z"/>
+                                <constraint firstItem="xLu-S3-r5y" firstAttribute="top" secondItem="YYy-9X-OnS" secondAttribute="top" id="cjb-gm-Ict"/>
+                                <constraint firstItem="EFf-3G-LxI" firstAttribute="top" secondItem="YYy-9X-OnS" secondAttribute="top" id="dcD-b5-Meb"/>
+                                <constraint firstAttribute="bottom" secondItem="cf9-O2-abs" secondAttribute="bottom" id="nOc-BO-V1G"/>
+                                <constraint firstItem="cf9-O2-abs" firstAttribute="top" secondItem="YYy-9X-OnS" secondAttribute="top" id="ySu-bc-WGS"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="tiL-o5-ygD">
+                            <rect key="frame" x="0.0" y="118.33333333333334" width="353" height="116.33333333333334"/>
+                            <subviews>
+                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9i-zO-ESN" customClass="GameButton" customModule="tic_turing_toe" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="116.33333333333333" height="116.33333333333333"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain"/>
+                                    <connections>
+                                        <action selector="gameButttonsAction:" destination="-1" eventType="touchUpInside" id="H1E-NS-TMZ"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5Z-9o-PCd" customClass="GameButton" customModule="tic_turing_toe" customModuleProvider="target">
+                                    <rect key="frame" x="118.33333333333334" y="0.0" width="116.33333333333334" height="116.33333333333333"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain"/>
+                                    <connections>
+                                        <action selector="gameButttonsAction:" destination="-1" eventType="touchUpInside" id="nAR-4Z-BGQ"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Sj-6u-DWm" customClass="GameButton" customModule="tic_turing_toe" customModuleProvider="target">
+                                    <rect key="frame" x="236.66666666666671" y="0.0" width="116.33333333333334" height="116.33333333333333"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain"/>
+                                    <connections>
+                                        <action selector="gameButttonsAction:" destination="-1" eventType="touchUpInside" id="hu6-6h-3cD"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Y5Z-9o-PCd" firstAttribute="top" secondItem="tiL-o5-ygD" secondAttribute="top" id="6tg-Xw-suV"/>
+                                <constraint firstItem="W9i-zO-ESN" firstAttribute="top" secondItem="tiL-o5-ygD" secondAttribute="top" id="9vF-GK-bfJ"/>
+                                <constraint firstAttribute="bottom" secondItem="W9i-zO-ESN" secondAttribute="bottom" id="dAw-yx-5lu"/>
+                                <constraint firstAttribute="bottom" secondItem="7Sj-6u-DWm" secondAttribute="bottom" id="eUb-7C-riZ"/>
+                                <constraint firstAttribute="bottom" secondItem="Y5Z-9o-PCd" secondAttribute="bottom" id="tz7-Hc-eqE"/>
+                                <constraint firstItem="7Sj-6u-DWm" firstAttribute="top" secondItem="tiL-o5-ygD" secondAttribute="top" id="wWi-of-6X4"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="mbC-PV-RPO">
+                            <rect key="frame" x="0.0" y="236.66666666666666" width="353" height="116.33333333333334"/>
+                            <subviews>
+                                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeC-MR-G3x" customClass="GameButton" customModule="tic_turing_toe" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="116.33333333333333" height="116.33333333333333"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain"/>
+                                    <connections>
+                                        <action selector="gameButttonsAction:" destination="-1" eventType="touchUpInside" id="dG9-f7-k1A"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jy-rR-HA0" customClass="GameButton" customModule="tic_turing_toe" customModuleProvider="target">
+                                    <rect key="frame" x="118.33333333333334" y="0.0" width="116.33333333333334" height="116.33333333333333"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain"/>
+                                    <connections>
+                                        <action selector="gameButttonsAction:" destination="-1" eventType="touchUpInside" id="nbj-UN-Oin"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F05-Ub-ah4" customClass="GameButton" customModule="tic_turing_toe" customModuleProvider="target">
+                                    <rect key="frame" x="236.66666666666671" y="0.0" width="116.33333333333334" height="116.33333333333333"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain"/>
+                                    <connections>
+                                        <action selector="gameButttonsAction:" destination="-1" eventType="touchUpInside" id="OTO-Lj-EDm"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="1jy-rR-HA0" firstAttribute="top" secondItem="mbC-PV-RPO" secondAttribute="top" id="Na3-bv-0lN"/>
+                                <constraint firstAttribute="bottom" secondItem="F05-Ub-ah4" secondAttribute="bottom" id="ULT-nD-Zel"/>
+                                <constraint firstAttribute="bottom" secondItem="1jy-rR-HA0" secondAttribute="bottom" id="kIc-89-eCC"/>
+                                <constraint firstItem="F05-Ub-ah4" firstAttribute="top" secondItem="mbC-PV-RPO" secondAttribute="top" id="uPo-Vr-Vmu"/>
+                                <constraint firstItem="zeC-MR-G3x" firstAttribute="top" secondItem="mbC-PV-RPO" secondAttribute="top" id="yQn-HW-RnN"/>
+                                <constraint firstAttribute="bottom" secondItem="zeC-MR-G3x" secondAttribute="bottom" id="zYy-98-itH"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="tiL-o5-ygD" firstAttribute="leading" secondItem="XkJ-Ld-DyZ" secondAttribute="leading" id="JhO-3D-nLq"/>
+                        <constraint firstAttribute="width" secondItem="XkJ-Ld-DyZ" secondAttribute="height" multiplier="1:1" id="LXa-1S-fKu"/>
+                        <constraint firstAttribute="trailing" secondItem="YYy-9X-OnS" secondAttribute="trailing" id="U7b-yz-HId"/>
+                        <constraint firstAttribute="trailing" secondItem="tiL-o5-ygD" secondAttribute="trailing" id="czv-Ul-P69"/>
+                        <constraint firstAttribute="trailing" secondItem="mbC-PV-RPO" secondAttribute="trailing" id="nCU-jM-l4F"/>
+                        <constraint firstItem="YYy-9X-OnS" firstAttribute="leading" secondItem="XkJ-Ld-DyZ" secondAttribute="leading" id="rsu-Q1-WKk"/>
+                        <constraint firstItem="mbC-PV-RPO" firstAttribute="leading" secondItem="XkJ-Ld-DyZ" secondAttribute="leading" id="yvD-IA-maD"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6G6-JR-aEs" customClass="DefaultButtonWithColor" customModule="tic_turing_toe" customModuleProvider="target">
+                    <rect key="frame" x="20" y="622.66666666666663" width="353" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="uvb-OD-xJF"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Reset"/>
+                    <connections>
+                        <action selector="resetButtonAction:" destination="-1" eventType="touchUpInside" id="YmI-vo-gIR"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="background-color"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UP4-5O-Zp6" secondAttribute="trailing" constant="20" id="15z-ao-FcV"/>
+                <constraint firstItem="XkJ-Ld-DyZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4Rz-hc-o9X"/>
+                <constraint firstItem="XkJ-Ld-DyZ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="94o-Rs-8ZT"/>
+                <constraint firstItem="7Pj-nT-yzN" firstAttribute="bottom" secondItem="XkJ-Ld-DyZ" secondAttribute="bottom" id="IQY-5Q-l4k"/>
+                <constraint firstItem="6G6-JR-aEs" firstAttribute="top" secondItem="7Pj-nT-yzN" secondAttribute="bottom" constant="20" id="MfY-uk-1Wy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XkJ-Ld-DyZ" secondAttribute="trailing" constant="20" id="V0z-Bz-qPw"/>
+                <constraint firstItem="UP4-5O-Zp6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="VrL-Jz-yU1"/>
+                <constraint firstItem="7Pj-nT-yzN" firstAttribute="trailing" secondItem="XkJ-Ld-DyZ" secondAttribute="trailing" id="YeC-fs-Rdw"/>
+                <constraint firstItem="7Pj-nT-yzN" firstAttribute="top" secondItem="XkJ-Ld-DyZ" secondAttribute="top" id="c30-cA-zI5"/>
+                <constraint firstItem="6G6-JR-aEs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="e9j-wh-j4B"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6G6-JR-aEs" secondAttribute="trailing" constant="20" id="eBg-ez-qvv"/>
+                <constraint firstItem="7Pj-nT-yzN" firstAttribute="top" secondItem="UP4-5O-Zp6" secondAttribute="bottom" constant="20" id="iIt-Qy-c87"/>
+                <constraint firstItem="7Pj-nT-yzN" firstAttribute="leading" secondItem="XkJ-Ld-DyZ" secondAttribute="leading" id="ijq-FI-knD"/>
+                <constraint firstItem="XkJ-Ld-DyZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="tLB-UE-gyv"/>
+            </constraints>
+            <point key="canvasLocation" x="36" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="background-color">
+            <color red="0.51372549019607838" green="0.62745098039215685" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

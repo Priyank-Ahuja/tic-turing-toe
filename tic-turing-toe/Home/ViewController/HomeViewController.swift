@@ -8,7 +8,7 @@
 import UIKit
 
 final class HomeViewController: UIViewController {
-
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,6 +16,16 @@ final class HomeViewController: UIViewController {
     }
     
     @IBAction func newGameButtonAction(_ sender: Any) {
-        self.navigationController?.present(SettingsViewController(), animated: true)
+        let settingsViewController = SettingsViewController()
+        settingsViewController.delegate = self
+        self.navigationController?.present(settingsViewController, animated: true)
+    }
+}
+
+extension HomeViewController: SettingsViewControllerDelegate {
+    func didSelectLevel(level: GameLevel) {
+        let model = GameViewModel(level: level)
+        let gameViewController = GameViewController(model: model)
+        self.navigationController?.pushViewController(gameViewController, animated: true)
     }
 }

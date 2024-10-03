@@ -50,24 +50,21 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFf-3G-LxI" customClass="GameButton" customModule="tic_turing_toe" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="116.33333333333333" height="116.33333333333333"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <connections>
                                         <action selector="gameButttonsAction:" destination="-1" eventType="touchUpInside" id="0wj-LZ-EZ0"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLu-S3-r5y" customClass="GameButton" customModule="tic_turing_toe" customModuleProvider="target">
                                     <rect key="frame" x="118.33333333333334" y="0.0" width="116.33333333333334" height="116.33333333333333"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <connections>
                                         <action selector="gameButttonsAction:" destination="-1" eventType="touchUpInside" id="JpL-HM-re1"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cf9-O2-abs" customClass="GameButton" customModule="tic_turing_toe" customModuleProvider="target">
                                     <rect key="frame" x="236.66666666666671" y="0.0" width="116.33333333333334" height="116.33333333333333"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <connections>
                                         <action selector="gameButttonsAction:" destination="-1" eventType="touchUpInside" id="1ZY-Hp-k7b"/>
                                     </connections>
@@ -87,24 +84,21 @@
                             <subviews>
                                 <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9i-zO-ESN" customClass="GameButton" customModule="tic_turing_toe" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="116.33333333333333" height="116.33333333333333"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <connections>
                                         <action selector="gameButttonsAction:" destination="-1" eventType="touchUpInside" id="H1E-NS-TMZ"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5Z-9o-PCd" customClass="GameButton" customModule="tic_turing_toe" customModuleProvider="target">
                                     <rect key="frame" x="118.33333333333334" y="0.0" width="116.33333333333334" height="116.33333333333333"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <connections>
                                         <action selector="gameButttonsAction:" destination="-1" eventType="touchUpInside" id="nAR-4Z-BGQ"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Sj-6u-DWm" customClass="GameButton" customModule="tic_turing_toe" customModuleProvider="target">
                                     <rect key="frame" x="236.66666666666671" y="0.0" width="116.33333333333334" height="116.33333333333333"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <connections>
                                         <action selector="gameButttonsAction:" destination="-1" eventType="touchUpInside" id="hu6-6h-3cD"/>
                                     </connections>
@@ -124,24 +118,21 @@
                             <subviews>
                                 <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeC-MR-G3x" customClass="GameButton" customModule="tic_turing_toe" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="116.33333333333333" height="116.33333333333333"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <connections>
                                         <action selector="gameButttonsAction:" destination="-1" eventType="touchUpInside" id="dG9-f7-k1A"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jy-rR-HA0" customClass="GameButton" customModule="tic_turing_toe" customModuleProvider="target">
                                     <rect key="frame" x="118.33333333333334" y="0.0" width="116.33333333333334" height="116.33333333333333"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <connections>
                                         <action selector="gameButttonsAction:" destination="-1" eventType="touchUpInside" id="nbj-UN-Oin"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F05-Ub-ah4" customClass="GameButton" customModule="tic_turing_toe" customModuleProvider="target">
                                     <rect key="frame" x="236.66666666666671" y="0.0" width="116.33333333333334" height="116.33333333333333"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <connections>
                                         <action selector="gameButttonsAction:" destination="-1" eventType="touchUpInside" id="OTO-Lj-EDm"/>
                                     </connections>

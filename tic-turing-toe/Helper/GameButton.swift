@@ -32,8 +32,4 @@ class GameButton: UIButton {
             
             self.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .bold)
         }
-    
-    func setButtonTitle(title: String) {
-        self.setTitle(title, for: .normal)
-    }
 }

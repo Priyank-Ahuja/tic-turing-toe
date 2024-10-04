@@ -7,7 +7,7 @@
 
 class GameViewModel {
     var board = [String](repeating: "", count: 9) // 9 empty slots
-    var currentPlayer = "X"
+    var currentPlayer = Constants.string.X
     var gameActive = true
     var level: GameLevel?
     
@@ -24,7 +24,7 @@ class GameViewModel {
     // Reset the game
     func resetGame() {
         board = [String](repeating: "", count: 9)
-        currentPlayer = "X"
+        currentPlayer = Constants.string.X
         gameActive = true
     }
     
@@ -65,7 +65,7 @@ class GameViewModel {
             move = randomMove()
         }
         
-        board[move] = "O"
+        board[move] = Constants.string.O
         return move
     }
     
@@ -103,7 +103,7 @@ class GameViewModel {
             var bestScore = Int.min
             for i in 0..<board.count where board[i] == "" {
                 var newBoard = board
-                newBoard[i] = "O"
+                newBoard[i] = Constants.string.O
                 let result = minimax(board: newBoard, depth: depth + 1, isMaximizing: false, alpha: alpha, beta: beta)
                 if result.score > bestScore {
                     bestScore = result.score
@@ -117,7 +117,7 @@ class GameViewModel {
             var bestScore = Int.max
             for i in 0..<board.count where board[i] == "" {
                 var newBoard = board
-                newBoard[i] = "X"
+                newBoard[i] = Constants.string.X
                 let result = minimax(board: newBoard, depth: depth + 1, isMaximizing: true, alpha: alpha, beta: beta)
                 if result.score < bestScore {
                     bestScore = result.score
@@ -133,9 +133,9 @@ class GameViewModel {
     // Evaluate the board state
     func evaluate(board: [String]) -> Int? {
         for combination in winningCombinations {
-            if board[combination[0]] == "O" && board[combination[0]] == board[combination[1]] && board[combination[1]] == board[combination[2]] {
+            if board[combination[0]] == Constants.string.O && board[combination[0]] == board[combination[1]] && board[combination[1]] == board[combination[2]] {
                 return 1 // AI wins
-            } else if board[combination[0]] == "X" && board[combination[0]] == board[combination[1]] && board[combination[1]] == board[combination[2]] {
+            } else if board[combination[0]] == Constants.string.X && board[combination[0]] == board[combination[1]] && board[combination[1]] == board[combination[2]] {
                 return -1 // Human wins
             }
         }

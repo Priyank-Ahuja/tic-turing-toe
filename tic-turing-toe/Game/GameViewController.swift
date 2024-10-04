@@ -42,7 +42,7 @@ class GameViewController: UIViewController {
         
         setupInterface()
         
-        statusLabel.text = "Player X's Turn"
+        statusLabel.text = Constants.string.playerXTurn
     }
     
     func setupInterface() {
@@ -69,24 +69,24 @@ class GameViewController: UIViewController {
     @IBAction func gameButttonsAction(_ sender: GameButton) {
         let tag = sender.tag
         
-        if viewModel?.processMove(at: tag, forPlayer: "X") == true {
-            updateUI(forPlayer: "X", atIndex: tag)
+        if viewModel?.processMove(at: tag, forPlayer: Constants.string.X) == true {
+            updateUI(forPlayer: Constants.string.X, atIndex: tag)
             
             if viewModel?.checkForWinner() == true {
-                statusLabel.text = "Player X Wins!"
+                statusLabel.text = Constants.string.playerXWins
             } else if viewModel?.board.contains("") == false {
-                statusLabel.text = "It's a Draw!"
+                statusLabel.text = Constants.string.itsADraw
             } else {
-                statusLabel.text = "Player O's Turn"
+                statusLabel.text = Constants.string.playerOTurn
                 let aiMoveIndex = viewModel?.aiMove() ?? -1
-                updateUI(forPlayer: "O", atIndex: aiMoveIndex)
+                updateUI(forPlayer: Constants.string.O, atIndex: aiMoveIndex)
                 
                 if viewModel?.checkForWinner() == true {
-                    statusLabel.text = "Player O Wins!"
+                    statusLabel.text = Constants.string.playerOWins
                 } else if viewModel?.board.contains("") == false {
-                    statusLabel.text = "It's a Draw!"
+                    statusLabel.text = Constants.string.itsADraw
                 } else {
-                    statusLabel.text = "Player X's Turn"
+                    statusLabel.text = Constants.string.playerXTurn
                 }
             }
         }
@@ -100,7 +100,7 @@ class GameViewController: UIViewController {
     
     @IBAction func resetButtonAction(_ sender: Any) {
         viewModel?.resetGame()
-        statusLabel.text = "Player X's Turn"
+        statusLabel.text = Constants.string.playerXTurn
         buttons?.forEach { button in
             button.setTitle("", for: .normal)
             button.isEnabled = true

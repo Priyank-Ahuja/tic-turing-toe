@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreBluetooth
 
 class GameViewController: UIViewController {
     
@@ -19,9 +20,9 @@ class GameViewController: UIViewController {
     @IBOutlet weak var gameButton6: GameButton!
     @IBOutlet weak var gameButton7: GameButton!
     @IBOutlet weak var gameButton8: GameButton!
-    
     @IBOutlet weak var gameBackgroundView: UIView!
     @IBOutlet weak var resetButton: DefaultButtonWithColor!
+    @IBOutlet weak var changeLevelButton: DefaultButtonWithColor!
     
     var buttons: [GameButton]?
     var viewModel: GameViewModel?
@@ -49,14 +50,19 @@ class GameViewController: UIViewController {
         switch viewModel?.level {
         case .easy:
             gameBackgroundView.backgroundColor = Constants.color.easyColor
+            changeLevelButton.isHidden = false
         case .medium:
             gameBackgroundView.backgroundColor = Constants.color.mediumColor
+            changeLevelButton.isHidden = false
         case .hard:
             gameBackgroundView.backgroundColor = Constants.color.hardColor
-        case .friend:
+            changeLevelButton.isHidden = false
+        case .bluetooth:
             gameBackgroundView.backgroundColor = Constants.color.friendColor
+            changeLevelButton.isHidden = true
         case .none:
             gameBackgroundView.backgroundColor = Constants.color.buttonBackgroundColor
+            changeLevelButton.isHidden = false
         }
     }
     
@@ -71,6 +77,9 @@ class GameViewController: UIViewController {
         
         if viewModel?.processMove(at: tag, forPlayer: Constants.string.X) == true {
             updateUI(forPlayer: Constants.string.X, atIndex: tag)
+            if viewModel?.isBluetoothGame == true {
+                viewModel?.sendMoveToOpponent(move: tag) // Send move to opponent via Bluetooth
+            }
             
             if viewModel?.checkForWinner() == true {
                 statusLabel.text = Constants.string.playerXWins
@@ -78,22 +87,27 @@ class GameViewController: UIViewController {
                 statusLabel.text = Constants.string.itsADraw
             } else {
                 statusLabel.text = Constants.string.playerOTurn
-                let aiMoveIndex = viewModel?.aiMove() ?? -1
-                updateUI(forPlayer: Constants.string.O, atIndex: aiMoveIndex)
                 
-                if viewModel?.checkForWinner() == true {
-                    statusLabel.text = Constants.string.playerOWins
-                } else if viewModel?.board.contains("") == false {
-                    statusLabel.text = Constants.string.itsADraw
-                } else {
-                    statusLabel.text = Constants.string.playerXTurn
+                // AI Move if not a Bluetooth game
+                if viewModel?.isBluetoothGame == false {
+                    let aiMoveIndex = viewModel?.aiMove() ?? -1
+                    updateUI(forPlayer: Constants.string.O, atIndex: aiMoveIndex)
+                    
+                    if viewModel?.checkForWinner() == true {
+                        statusLabel.text = Constants.string.playerOWins
+                    } else if viewModel?.board.contains("") == false {
+                        statusLabel.text = Constants.string.itsADraw
+                    } else {
+                        statusLabel.text = Constants.string.playerXTurn
+                    }
                 }
             }
         }
     }
     
     @IBAction func changeLevelAction(_ sender: Any) {
-        let settingsViewController = SettingsViewController()
+        let model = SettingsViewModel(source: .game)
+        let settingsViewController = SettingsViewController(model: model)
         settingsViewController.delegate = self
         self.navigationController?.present(settingsViewController, animated: true)
     }

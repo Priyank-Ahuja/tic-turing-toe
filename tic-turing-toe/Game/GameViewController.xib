@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameViewController" customModule="tic_turing_toe" customModuleProvider="target">
             <connections>
+                <outlet property="changeLevelButton" destination="Sgx-sy-ScY" id="xzM-yw-68c"/>
                 <outlet property="gameBackgroundView" destination="7Pj-nT-yzN" id="Wan-Oz-Yrf"/>
                 <outlet property="gameButton0" destination="EFf-3G-LxI" id="gMH-Vr-ZPs"/>
                 <outlet property="gameButton1" destination="xLu-S3-r5y" id="sHg-ZZ-PCY"/>
@@ -210,7 +211,7 @@
             <color red="0.51372549019607838" green="0.62745098039215685" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemPinkColor">
-            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

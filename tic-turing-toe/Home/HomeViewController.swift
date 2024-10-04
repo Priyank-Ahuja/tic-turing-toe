@@ -16,7 +16,8 @@ final class HomeViewController: UIViewController {
     }
     
     @IBAction func newGameButtonAction(_ sender: Any) {
-        let settingsViewController = SettingsViewController()
+        let model = SettingsViewModel(source: .home)
+        let settingsViewController = SettingsViewController(model: model)
         settingsViewController.delegate = self
         self.navigationController?.present(settingsViewController, animated: true)
     }

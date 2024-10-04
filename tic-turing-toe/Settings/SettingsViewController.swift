@@ -7,19 +7,43 @@
 
 import UIKit
 
+
+
 protocol SettingsViewControllerDelegate {
     func didSelectLevel(level: GameLevel)
 }
 
 final class SettingsViewController: UIViewController {
     
+    @IBOutlet weak var friendButton: DefaultButton!
+    
     var delegate: SettingsViewControllerDelegate?
+    var viewModel: SettingsViewModel?
+    
+    init(model: SettingsViewModel) {
+        self.viewModel = model
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.isNavigationBarHidden = true
         setupPresentationController()
+        setupInterface()
+    }
+    
+    func setupInterface() {
+        switch viewModel?.source {
+        case .home, .none:
+            self.friendButton.isHidden = false
+        case .game:
+            self.friendButton.isHidden = true
+        }
     }
     
     private func setupPresentationController() {
@@ -51,7 +75,7 @@ final class SettingsViewController: UIViewController {
     
     @IBAction func friendButtonAction(_ sender: Any) {
         self.dismiss(animated: true) {
-            self.delegate?.didSelectLevel(level: .friend)
+            self.delegate?.didSelectLevel(level: .bluetooth)
         }
     }
 }

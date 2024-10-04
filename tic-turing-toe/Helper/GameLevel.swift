@@ -6,5 +6,5 @@
 //
 
 enum GameLevel {
-    case easy, medium, hard, friend
+    case easy, medium, hard, bluetooth
 }

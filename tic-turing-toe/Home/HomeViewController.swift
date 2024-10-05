@@ -20,6 +20,11 @@ final class HomeViewController: UIViewController {
         settingsViewController.delegate = self
         self.navigationController?.present(settingsViewController, animated: true)
     }
+    
+    @IBAction func savedGamesButtonAction(_ sender: Any) {
+        let savedGamesViewController = SavedGamesViewController()
+        self.navigationController?.pushViewController(savedGamesViewController, animated: true)
+    }
 }
 
 extension HomeViewController: SettingsViewControllerDelegate {

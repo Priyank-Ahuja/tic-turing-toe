@@ -44,6 +44,9 @@
                             <color key="tintColor" red="0.118500419" green="0.15981477499999999" blue="0.2039274573" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Saved Games"/>
+                            <connections>
+                                <action selector="savedGamesButtonAction:" destination="-1" eventType="touchUpInside" id="7TG-3U-has"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>

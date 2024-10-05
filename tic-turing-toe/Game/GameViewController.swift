@@ -23,6 +23,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var gameBackgroundView: UIView!
     @IBOutlet weak var resetButton: DefaultButtonWithColor!
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var buttons: [GameButton]?
     var viewModel: GameViewModel?
     
@@ -65,6 +66,36 @@ class GameViewController: UIViewController {
         buttons?[index].isEnabled = false
     }
     
+    func showAlert(title: String) {
+        let alert = UIAlertController(title: title, message: "", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { UIAlertAction in
+            DispatchQueue.main.async { [weak self] in
+                self?.viewModel?.resetGame()
+                self?.statusLabel.text = Constants.string.playerXTurn
+                self?.buttons?.forEach { button in
+                    button.setTitle("", for: .normal)
+                    button.isEnabled = true
+                }
+            }
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func endGame(winner: String) {
+        guard let mode = viewModel?.level else {return}
+        let game = Game(context: self.context)
+        game.date = Date.now
+        game.mode = "\(mode)"
+        game.winner = winner
+        viewModel?.gameActive = false
+        do{
+            try self.context.save()
+            self.showAlert(title: "Game Saved!")
+        } catch {
+            self.showAlert(title: "Error saving game!")
+        }
+    }
+    
     
     @IBAction func gameButttonsAction(_ sender: GameButton) {
         let tag = sender.tag
@@ -74,17 +105,20 @@ class GameViewController: UIViewController {
             
             if viewModel?.checkForWinner() == true {
                 statusLabel.text = Constants.string.playerXWins
+                endGame(winner: Constants.string.X)
             } else if viewModel?.board.contains("") == false {
                 statusLabel.text = Constants.string.itsADraw
+                endGame(winner: Constants.string.draw)
             } else {
                 statusLabel.text = Constants.string.playerOTurn
                 let aiMoveIndex = viewModel?.aiMove() ?? -1
                 updateUI(forPlayer: Constants.string.O, atIndex: aiMoveIndex)
-                
                 if viewModel?.checkForWinner() == true {
                     statusLabel.text = Constants.string.playerOWins
+                    endGame(winner: Constants.string.O)
                 } else if viewModel?.board.contains("") == false {
                     statusLabel.text = Constants.string.itsADraw
+                    endGame(winner: Constants.string.O)
                 } else {
                     statusLabel.text = Constants.string.playerXTurn
                 }

@@ -20,6 +20,7 @@ struct Constants {
     struct string {
         static let X = "X"
         static let O = "O"
+        static let draw = "Draw"
         static let playerXTurn = "Player X's Turn"
         static let playerXWins = "Player X Wins!"
         static let itsADraw = "It's a Draw!"

@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol SettingsViewControllerDelegate {
+    func didSelectLevel(level: GameLevel)
+}
+
 final class SettingsViewController: UIViewController {
+    
+    var delegate: SettingsViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +28,30 @@ final class SettingsViewController: UIViewController {
                 .medium()
             ]
             presentationController.prefersGrabberVisible = true
+        }
+    }
+    
+    @IBAction func easyButtonAction(_ sender: Any) {
+        self.dismiss(animated: true) {
+            self.delegate?.didSelectLevel(level: .easy)
+        }
+    }
+    
+    @IBAction func mediumButtonAction(_ sender: Any) {
+        self.dismiss(animated: true) {
+            self.delegate?.didSelectLevel(level: .medium)
+        }
+    }
+    
+    @IBAction func hardButtonAction(_ sender: Any) {
+        self.dismiss(animated: true) {
+            self.delegate?.didSelectLevel(level: .hard)
+        }
+    }
+    
+    @IBAction func friendButtonAction(_ sender: Any) {
+        self.dismiss(animated: true) {
+            self.delegate?.didSelectLevel(level: .friend)
         }
     }
 }

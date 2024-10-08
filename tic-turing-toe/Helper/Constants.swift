@@ -16,4 +16,15 @@ struct Constants {
         static let hardColor = UIColor(named: "hard-color")
         static let friendColor = UIColor(named: "friend-color")
     }
+    
+    struct string {
+        static let X = "X"
+        static let O = "O"
+        static let draw = "Draw"
+        static let playerXTurn = "Player X's Turn"
+        static let playerXWins = "Player X Wins!"
+        static let itsADraw = "It's a Draw!"
+        static let playerOTurn = "Player O's Turn"
+        static let playerOWins = "Player O Wins!"
+    }
 }
